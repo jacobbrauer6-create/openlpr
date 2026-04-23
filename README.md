@@ -20,15 +20,29 @@ A comprehensive, production-ready MLOps pipeline for training licence plate reco
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/openlpr
+git clone https://github.com/jacobbrauer6-create/openlpr.git
 cd openlpr
+
+# Set up your virtual environment
+python -m venv .venv
+# Windows:
+.\.venv\Scripts\activate
+# Linux/Mac:
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# 4. Generate Synthetic Training Data
+# Since raw datasets are excluded to keep the repo lean, 
+# start by generating a synthetic set for testing.
+python scripts/generate_synthetic.py --count 1000 --region us
 
 # 1. Download + prepare dataset
 python scripts/prepare_dataset.py --regions us eu asia --split 80/10/10
 
-# 2. Train with ResNet-50
-python scripts/train.py --backbone resnet50 --config configs/base.yaml --track-energy
+# 2. Train with ResNet-18, could also train with another model here if desired
+python scripts/train.py --backbone resnet18 --config configs/base.yaml --track-energy
 
 # 3. Evaluate accuracy vs. latency
 python scripts/evaluate.py --checkpoint checkpoints/latest.pt --gpu-profile
