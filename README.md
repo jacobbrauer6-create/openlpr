@@ -1,4 +1,4 @@
-# 🚗 OpenLPR — Open-Source Licence Plate Recognition Pipeline
+# OpenLPR — Open-Source Licence Plate Recognition Pipeline
 
 A comprehensive, production-ready MLOps pipeline for training licence plate recognition models across **70+ countries**, with built-in accuracy benchmarking, energy/CO₂ theoretically produced by energy consumption during training, and continuous dataset improvement.
 
