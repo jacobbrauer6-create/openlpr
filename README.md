@@ -51,7 +51,7 @@ python scripts/evaluate.py --checkpoint checkpoints/latest.pt --gpu-profile
 python scripts/mlops_iteration.py --version v2 --compare-to v1
 ```
 
-## 🔌 Hardware Acceleration
+## Hardware Acceleration
 
 OpenLPR automatically detects the best available device:
 - **NVIDIA GPU**: Uses CUDA. Ensure [NVIDIA Drivers](https://www.nvidia.com/drivers) are installed.
