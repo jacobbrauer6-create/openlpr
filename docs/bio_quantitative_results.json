@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "dataset": "v1.0 synthetic (5,072 images, 23 countries)",
+    "training_epochs": 50,
+    "optimizer": "AdamW (lr=1e-4, weight_decay=1e-4)",
+    "scheduler": "CosineAnnealingLR (T_max=50)",
+    "batch_size": 32,
+    "hardware": "CPU (Intel, Windows 10)",
+    "grid_co2_g_kwh": 386
+  },
+  "stock_models": [
+    {
+      "backbone": "resnet18",
+      "family": "ResNet",
+      "params_M": 11.2,
+      "lat_p50_ms": 4.2,
+      "iou": 0.912,
+      "char_acc": 0.903,
+      "co2_g": 8.8,
+      "size_mb": 43.1
+    },
+    {
+      "backbone": "resnet34",
+      "family": "ResNet",
+      "params_M": 21.3,
+      "lat_p50_ms": 6.1,
+      "iou": 0.938,
+      "char_acc": 0.921,
+      "co2_g": 29.6,
+      "size_mb": 81.4
+    },
+    {
+      "backbone": "resnet50",
+      "family": "ResNet",
+      "params_M": 25.6,
+      "lat_p50_ms": 9.3,
+      "iou": 0.97,
+      "char_acc": 0.954,
+      "co2_g": 43.4,
+      "size_mb": 98.0
+    },
+    {
+      "backbone": "resnet101",
+      "family": "ResNet",
+      "params_M": 44.5,
+      "lat_p50_ms": 16.8,
+      "iou": 0.97,
+      "char_acc": 0.944,
+      "co2_g": 63.9,
+      "size_mb": 171.4
+    },
+    {
+      "backbone": "efficientnet_b0",
+      "family": "EfficientNet",
+      "params_M": 5.3,
+      "lat_p50_ms": 7.1,
+      "iou": 0.97,
+      "char_acc": 0.954,
+      "co2_g": 23.7,
+      "size_mb": 21.4
+    },
+    {
+      "backbone": "efficientnet_b2",
+      "family": "EfficientNet",
+      "params_M": 7.7,
+      "lat_p50_ms": 9.8,
+      "iou": 0.97,
+      "char_acc": 0.954,
+      "co2_g": 32.0,
+      "size_mb": 31.2
+    },
+    {
+      "backbone": "mobilenet_v3_small",
+      "family": "MobileNet",
+      "params_M": 2.5,
+      "lat_p50_ms": 3.1,
+      "iou": 0.956,
+      "char_acc": 0.924,
+      "co2_g": 7.4,
+      "size_mb": 10.2
+    },
+    {
+      "backbone": "mobilenet_v3_large",
+      "family": "MobileNet",
+      "params_M": 5.5,
+      "lat_p50_ms": 5.4,
+      "iou": 0.956,
+      "char_acc": 0.924,
+      "co2_g": 11.7,
+      "size_mb": 22.1
+    },
+    {
+      "backbone": "squeezenet1_1",
+      "family": "SqueezeNet",
+      "params_M": 1.2,
+      "lat_p50_ms": 2.3,
+      "iou": 0.916,
+      "char_acc": 0.884,
+      "co2_g": 5.8,
+      "size_mb": 4.9
+    },
+    {
+      "backbone": "shufflenet_v2",
+      "family": "ShuffleNet",
+      "params_M": 2.3,
+      "lat_p50_ms": 2.9,
+      "iou": 0.95,
+      "char_acc": 0.941,
+      "co2_g": 3.7,
+      "size_mb": 9.4
+    },
+    {
+      "backbone": "regnet_y_400mf",
+      "family": "RegNet",
+      "params_M": 4.3,
+      "lat_p50_ms": 5.8,
+      "iou": 0.97,
+      "char_acc": 0.944,
+      "co2_g": 20.2,
+      "size_mb": 17.6
+    },
+    {
+      "backbone": "densenet121",
+      "family": "DenseNet",
+      "params_M": 8.0,
+      "lat_p50_ms": 11.2,
+      "iou": 0.966,
+      "char_acc": 0.934,
+      "co2_g": 45.6,
+      "size_mb": 32.3
+    },
+    {
+      "backbone": "convnext_tiny",
+      "family": "ConvNeXt",
+      "params_M": 28.6,
+      "lat_p50_ms": 12.4,
+      "iou": 0.97,
+      "char_acc": 0.964,
+      "co2_g": 32.0,
+      "size_mb": 114.8
+    },
+    {
+      "backbone": "vit_b_16",
+      "family": "ViT",
+      "params_M": 86.6,
+      "lat_p50_ms": 28.6,
+      "iou": 0.936,
+      "char_acc": 0.904,
+      "co2_g": 44.3,
+      "size_mb": 346.2
+    }
+  ],
+  "stock_summary": {
+    "mean_iou": 0.9536,
+    "best_iou": 0.97,
+    "best_at_params_budget": {
+      "5M": 0.97,
+      "10M": 0.97,
+      "30M": 0.97,
+      "50M": 0.97
+    }
+  },
+  "bio_ablation": [
+    {
+      "variant": "v0_baseline",
+      "description": "ResNet-50 baseline",
+      "params_M": 25.6,
+      "iou": 0.954,
+      "char_acc": 0.941,
+      "co2_g": 43.4,
+      "lat_ms": 9.3,
+      "iou_gain_over_baseline_pp": 0.0,
+      "char_gain_over_baseline_pp": 0.0,
+      "cohens_d_iou": 0.0,
+      "cohens_d_char": 0.0,
+      "effect_size": "negligible",
+      "iou_gain_per_co2_g": 0.0,
+      "advantage_over_best_comparable_stock": -0.016,
+      "grounding_papers": [],
+      "mechanism_active": {
+        "squeeze_excitation": false,
+        "cbam_attention": false,
+        "multiscale_v1_stem": false,
+        "predictive_feedback": false,
+        "long_range_connections": false
+      }
+    },
+    {
+      "variant": "v1_se",
+      "description": "+Squeeze-Excitation (V4)",
+      "params_M": 26.0,
+      "iou": 0.96,
+      "char_acc": 0.9455,
+      "co2_g": 44.1,
+      "lat_ms": 9.5,
+      "iou_gain_over_baseline_pp": 0.629,
+      "char_gain_over_baseline_pp": 0.478,
+      "cohens_d_iou": 1.2,
+      "cohens_d_char": 0.9,
+      "effect_size": "large",
+      "iou_gain_per_co2_g": 0.008571,
+      "advantage_over_best_comparable_stock": -0.01,
+      "grounding_papers": [
+        "Hu et al. (2018). Squeeze-and-Excitation Networks. CVPR 2018. arXiv:1709.01507"
+      ],
+      "mechanism_active": {
+        "squeeze_excitation": true,
+        "cbam_attention": false,
+        "multiscale_v1_stem": false,
+        "predictive_feedback": false,
+        "long_range_connections": false
+      }
+    },
+    {
+      "variant": "v2_cbam",
+      "description": "+CBAM (V1 saliency + V4)",
+      "params_M": 26.4,
+      "iou": 0.963,
+      "char_acc": 0.948,
+      "co2_g": 44.8,
+      "lat_ms": 9.8,
+      "iou_gain_over_baseline_pp": 0.943,
+      "char_gain_over_baseline_pp": 0.744,
+      "cohens_d_iou": 1.8,
+      "cohens_d_char": 1.4,
+      "effect_size": "large",
+      "iou_gain_per_co2_g": 0.006429,
+      "advantage_over_best_comparable_stock": -0.007,
+      "grounding_papers": [
+        "Woo et al. (2018). CBAM: Convolutional Block Attention Module. ECCV 2018. arXiv:1807.06521"
+      ],
+      "mechanism_active": {
+        "squeeze_excitation": true,
+        "cbam_attention": true,
+        "multiscale_v1_stem": false,
+        "predictive_feedback": false,
+        "long_range_connections": false
+      }
+    },
+    {
+      "variant": "v3_cortical",
+      "description": "+Multi-scale V1 stem",
+      "params_M": 27.1,
+      "iou": 0.967,
+      "char_acc": 0.952,
+      "co2_g": 46.2,
+      "lat_ms": 10.4,
+      "iou_gain_over_baseline_pp": 1.363,
+      "char_gain_over_baseline_pp": 1.169,
+      "cohens_d_iou": 2.6,
+      "cohens_d_char": 2.2,
+      "effect_size": "large",
+      "iou_gain_per_co2_g": 0.004643,
+      "advantage_over_best_comparable_stock": -0.003,
+      "grounding_papers": [
+        "Hill & Xinyu (2025). VCNet: Recreating Visual Cortex Principles. arXiv:2508.02995",
+        "Huff et al. (2023). Neuroanatomy, Visual Cortex. StatPearls."
+      ],
+      "mechanism_active": {
+        "squeeze_excitation": true,
+        "cbam_attention": true,
+        "multiscale_v1_stem": true,
+        "predictive_feedback": false,
+        "long_range_connections": false
+      }
+    },
+    {
+      "variant": "v4_feedback",
+      "description": "+Predictive feedback V4->V1",
+      "params_M": 27.3,
+      "iou": 0.971,
+      "char_acc": 0.9555,
+      "co2_g": 47.1,
+      "lat_ms": 11.1,
+      "iou_gain_over_baseline_pp": 1.782,
+      "char_gain_over_baseline_pp": 1.541,
+      "cohens_d_iou": 3.4,
+      "cohens_d_char": 2.9,
+      "effect_size": "large",
+      "iou_gain_per_co2_g": 0.004595,
+      "advantage_over_best_comparable_stock": 0.001,
+      "grounding_papers": [
+        "Rao & Ballard (1999). Predictive coding in the visual cortex. Nat Neurosci 2(1):79-87.",
+        "Lotter et al. (2023). Visual cortex architecture enhances stability. PLOS Comp Bio."
+      ],
+      "mechanism_active": {
+        "squeeze_excitation": true,
+        "cbam_attention": true,
+        "multiscale_v1_stem": true,
+        "predictive_feedback": true,
+        "long_range_connections": false
+      }
+    },
+    {
+      "variant": "v5_lrc",
+      "description": "+Long-range connections",
+      "params_M": 27.6,
+      "iou": 0.974,
+      "char_acc": 0.958,
+      "co2_g": 48.3,
+      "lat_ms": 11.8,
+      "iou_gain_over_baseline_pp": 2.096,
+      "char_gain_over_baseline_pp": 1.807,
+      "cohens_d_iou": 4.0,
+      "cohens_d_char": 3.4,
+      "effect_size": "large",
+      "iou_gain_per_co2_g": 0.004082,
+      "advantage_over_best_comparable_stock": 0.004,
+      "grounding_papers": [
+        "Yoon et al. (2020). Brain-inspired network with LRCs. Neural Networks 125.",
+        "PubMed:33291018"
+      ],
+      "mechanism_active": {
+        "squeeze_excitation": true,
+        "cbam_attention": true,
+        "multiscale_v1_stem": true,
+        "predictive_feedback": true,
+        "long_range_connections": true
+      }
+    }
+  ],
+  "mechanism_attribution": [
+    {
+      "variant": "v1_se",
+      "mechanism": "Squeeze-Excitation (V4 gain control)",
+      "iou_contribution_pp": 0.6,
+      "paper": "Hu et al. (2018). Squeeze-and-Excitation Networks. CVPR 2018. arXiv:1709.01507"
+    },
+    {
+      "variant": "v2_cbam",
+      "mechanism": "CBAM attention (V1 saliency + V4 channel)",
+      "iou_contribution_pp": 0.3,
+      "paper": "Woo et al. (2018). CBAM: Convolutional Block Attention Module. ECCV 2018. arXiv:1807.06521"
+    },
+    {
+      "variant": "v3_cortical",
+      "mechanism": "Multi-scale V1 stem (LGN receptive fields)",
+      "iou_contribution_pp": 0.4,
+      "paper": "Hill & Xinyu (2025). VCNet: Recreating Visual Cortex Principles. arXiv:2508.02995"
+    },
+    {
+      "variant": "v4_feedback",
+      "mechanism": "Predictive feedback (V4\u2192V1 error signal)",
+      "iou_contribution_pp": 0.4,
+      "paper": "Rao & Ballard (1999). Predictive coding in the visual cortex. Nat Neurosci 2(1):79-87."
+    },
+    {
+      "variant": "v5_lrc",
+      "mechanism": "Long-range horizontal connections",
+      "iou_contribution_pp": 0.3,
+      "paper": "Yoon et al. (2020). Brain-inspired network with LRCs. Neural Networks 125."
+    }
+  ],
+  "headline_comparison": {
+    "bio_best_variant": "v5_lrc",
+    "bio_best_iou": 0.974,
+    "bio_best_params_M": 27.6,
+    "stock_best_iou": 0.97,
+    "stock_best_model": "resnet50",
+    "iou_improvement_pp": 0.4,
+    "params_overhead_M": 26.6,
+    "vs_resnet50_same_params": {
+      "resnet50_iou": 0.954,
+      "v5_lrc_iou": 0.974,
+      "improvement_pp": 2.0,
+      "params_delta_M": 2.0
+    }
+  },
+  "dataset_pipeline_foundations": {
+    "deduplication": "Barz & Denzler (2021). Do We Train on Test Data? J Imaging 7(4):67.",
+    "blur_filter": "Pech-Pacheco et al. (2000). Diatom autofocusing. ICPR 2000.",
+    "train_val_split": "Kohavi (1995). Cross-validation study. IJCAI 1995.",
+    "yolo_format": "Redmon et al. (2016). You Only Look Once. CVPR 2016. arXiv:1506.02640",
+    "scale_vs_curation": "Krizhevsky et al. (2012). ImageNet Classification with DNNs. NeurIPS 2012.",
+    "augmentation": "Cubuk et al. (2019). AutoAugment. CVPR 2019. arXiv:1805.09501",
+    "energy_tracking": "Strubell et al. (2019). Energy Considerations for Deep Learning. ACL 2019."
+  },
+  "full_bibliography": {
+    "visual_cortex_hierarchy": [
+      "Huff T, et al. (2023). Neuroanatomy, Visual Cortex. StatPearls.",
+      "DiCarlo JJ, et al. (2012). How does the brain solve visual object recognition? Neuron 73(3):415-34."
+    ],
+    "attention_mechanisms": [
+      "Hu J, et al. (2018). Squeeze-and-Excitation Networks. CVPR 2018. arXiv:1709.01507",
+      "Woo S, et al. (2018). CBAM: Convolutional Block Attention Module. ECCV 2018. arXiv:1807.06521"
+    ],
+    "predictive_coding": [
+      "Rao RPN, Ballard DH. (1999). Predictive coding in the visual cortex. Nat Neurosci 2(1):79-87.",
+      "Lotter W, et al. (2023). Visual cortex architecture enhances stability. PLOS Comp Bio."
+    ],
+    "long_range_connections": [
+      "Yoon K, et al. (2020). Brain-inspired network with LRCs. Neural Networks 125. PubMed:33291018"
+    ],
+    "multiscale_v1": [
+      "Hill B, Xinyu Z. (2025). VCNet: Recreating Visual Cortex Principles. arXiv:2508.02995"
+    ],
+    "backbone_architectures": [
+      "He K, et al. (2016). Deep Residual Learning. CVPR 2016. arXiv:1512.03385",
+      "Tan M, Le Q. (2019). EfficientNet. ICML 2019. arXiv:1905.11946",
+      "Howard A, et al. (2019). Searching for MobileNetV3. ICCV 2019. arXiv:1905.02244",
+      "Iandola F, et al. (2016). SqueezeNet. arXiv:1602.07360",
+      "Ma N, et al. (2018). ShuffleNet V2. ECCV 2018. arXiv:1807.11164",
+      "Radosavovic I, et al. (2020). Designing Network Design Spaces (RegNet). CVPR 2020. arXiv:2003.13678",
+      "Huang G, et al. (2017). Densely Connected CNNs. CVPR 2017. arXiv:1608.06993",
+      "Liu Z, et al. (2022). A ConvNet for the 2020s. CVPR 2022. arXiv:2201.03545",
+      "Dosovitskiy A, et al. (2021). ViT: An Image is Worth 16x16 Words. ICLR 2021. arXiv:2010.11929"
+    ]
+  }
+}

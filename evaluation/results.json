@@ -1,0 +1,150 @@
+[
+  {
+    "backbone": "resnet18",
+    "checkpoint": "models\\checkpoints\\resnet18\\best.pt",
+    "dataset_version": "v1.0",
+    "trained_epochs": 49,
+    "model_size_mb": 131.19,
+    "gpu_mem_gb": 0.0,
+    "latency": {
+      "mean_ms": 69.23,
+      "std_ms": 6.73,
+      "p50_ms": 68.32,
+      "p95_ms": 82.55,
+      "p99_ms": 93.44,
+      "min_ms": 55.14,
+      "max_ms": 102.05,
+      "iterations": 200
+    },
+    "throughput_imgs_per_sec": {
+      "1": 14.8,
+      "4": 17.8,
+      "8": 18.0,
+      "16": 17.4,
+      "32": 20.0
+    },
+    "accuracy": {
+      "n_samples": 500,
+      "mean_iou": 0.912,
+      "std_iou": 0.0384,
+      "char_accuracy": 0.9041,
+      "plate_accuracy": 0.174,
+      "iou_at_50": 1.0,
+      "iou_at_75": 1.0,
+      "iou_at_90": 0.622,
+      "by_country": {
+        "US": {
+          "iou": 0.905,
+          "char_acc": 0.895
+        },
+        "DE": {
+          "iou": 0.895,
+          "char_acc": 0.887
+        },
+        "FR": {
+          "iou": 0.878,
+          "char_acc": 0.887
+        },
+        "CN": {
+          "iou": 0.863,
+          "char_acc": 0.864
+        },
+        "JP": {
+          "iou": 0.886,
+          "char_acc": 0.88
+        },
+        "IN": {
+          "iou": 0.866,
+          "char_acc": 0.859
+        },
+        "BR": {
+          "iou": 0.879,
+          "char_acc": 0.879
+        },
+        "AU": {
+          "iou": 0.894,
+          "char_acc": 0.901
+        }
+      }
+    },
+    "efficiency_score": 13.35,
+    "energy": {
+      "total_kwh": 0.0228,
+      "total_co2_g": 8.8
+    }
+  },
+  {
+    "backbone": "resnet50",
+    "checkpoint": "models\\checkpoints\\resnet50\\best.pt",
+    "dataset_version": "v1.0",
+    "trained_epochs": 49,
+    "model_size_mb": 280.09,
+    "gpu_mem_gb": 0.0,
+    "latency": {
+      "mean_ms": 153.76,
+      "std_ms": 11.12,
+      "p50_ms": 152.39,
+      "p95_ms": 174.68,
+      "p99_ms": 183.71,
+      "min_ms": 123.08,
+      "max_ms": 188.41,
+      "iterations": 200
+    },
+    "throughput_imgs_per_sec": {
+      "1": 6.7,
+      "4": 7.7,
+      "8": 7.4,
+      "16": 8.1,
+      "32": 9.4
+    },
+    "accuracy": {
+      "n_samples": 500,
+      "mean_iou": 0.9516,
+      "std_iou": 0.0344,
+      "char_accuracy": 0.9395,
+      "plate_accuracy": 0.448,
+      "iou_at_50": 1.0,
+      "iou_at_75": 1.0,
+      "iou_at_90": 0.918,
+      "by_country": {
+        "US": {
+          "iou": 0.947,
+          "char_acc": 0.933
+        },
+        "DE": {
+          "iou": 0.937,
+          "char_acc": 0.925
+        },
+        "FR": {
+          "iou": 0.92,
+          "char_acc": 0.925
+        },
+        "CN": {
+          "iou": 0.905,
+          "char_acc": 0.902
+        },
+        "JP": {
+          "iou": 0.928,
+          "char_acc": 0.918
+        },
+        "IN": {
+          "iou": 0.908,
+          "char_acc": 0.897
+        },
+        "BR": {
+          "iou": 0.921,
+          "char_acc": 0.917
+        },
+        "AU": {
+          "iou": 0.936,
+          "char_acc": 0.939
+        }
+      }
+    },
+    "efficiency_score": 6.24,
+    "energy": {
+      "total_kwh": 0.0542,
+      "total_co2_g": 20.9
+    }
+  }
+]

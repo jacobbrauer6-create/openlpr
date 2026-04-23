@@ -1,0 +1,6 @@
+# Dataset config
+augmentation:
+  augment_factor: 4
+  night_mode_prob: 0.2
+  occlusion_prob: 0.15
+

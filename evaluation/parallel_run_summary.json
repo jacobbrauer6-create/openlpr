@@ -1,0 +1,121 @@
+{
+  "run_date": "2026-04-07T18:01:40.956139",
+  "backbones": [
+    "resnet18",
+    "resnet34",
+    "resnet50",
+    "resnet101",
+    "efficientnet_b0",
+    "efficientnet_b2",
+    "mobilenet_v3_small",
+    "mobilenet_v3_large",
+    "squeezenet1_1",
+    "shufflenet_v2",
+    "regnet_y_400mf",
+    "densenet121",
+    "convnext_tiny",
+    "vit_b_16"
+  ],
+  "max_workers": 4,
+  "total_elapsed_s": 1145.2,
+  "results": {
+    "resnet18": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 18.7,
+      "total_kwh": 0.0485
+    },
+    "resnet34": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 29.6,
+      "total_kwh": 0.0766
+    },
+    "resnet50": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 43.4,
+      "total_kwh": 0.1124
+    },
+    "resnet101": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 63.9,
+      "total_kwh": 0.1656
+    },
+    "efficientnet_b0": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 23.7,
+      "total_kwh": 0.0615
+    },
+    "efficientnet_b2": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 32.0,
+      "total_kwh": 0.0829
+    },
+    "mobilenet_v3_small": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.956,
+      "total_co2_g": 7.4,
+      "total_kwh": 0.0192
+    },
+    "mobilenet_v3_large": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.956,
+      "total_co2_g": 11.7,
+      "total_kwh": 0.0302
+    },
+    "squeezenet1_1": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.916,
+      "total_co2_g": 5.8,
+      "total_kwh": 0.0151
+    },
+    "shufflenet_v2": {
+      "status": "done",
+      "elapsed_s": 33.0,
+      "best_iou": null,
+      "total_co2_g": null,
+      "total_kwh": null
+    },
+    "regnet_y_400mf": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 20.2,
+      "total_kwh": 0.0523
+    },
+    "densenet121": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.966,
+      "total_co2_g": 45.6,
+      "total_kwh": 0.1182
+    },
+    "convnext_tiny": {
+      "status": "skipped",
+      "elapsed_s": 0,
+      "best_iou": 0.97,
+      "total_co2_g": 32.0,
+      "total_kwh": 0.083
+    },
+    "vit_b_16": {
+      "status": "done",
+      "elapsed_s": 1136.5,
+      "best_iou": 0.936,
+      "total_co2_g": 44.3,
+      "total_kwh": 0.1149
+    }
+  }
+}
