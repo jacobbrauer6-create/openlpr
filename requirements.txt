@@ -1,4 +1,5 @@
-# Core ML
+# Core ML - Cross-Platform Compatibility
+# For Windows/Linux GPU: Install via 'pip install torch --index-url https://download.pytorch.org/whl/cu121'
 torch>=2.1.0
 torchvision>=0.16.0
 numpy>=1.24.0
@@ -23,7 +24,7 @@ PyYAML>=6.0
 pandas>=2.0.0
 
 # GPU monitoring
-pynvml>=11.5.0
+nvidia-ml-py>=13.595.45
 
 # Annotation integration
 label-studio-sdk>=0.0.32

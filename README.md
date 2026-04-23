@@ -51,7 +51,21 @@ python scripts/evaluate.py --checkpoint checkpoints/latest.pt --gpu-profile
 python scripts/mlops_iteration.py --version v2 --compare-to v1
 ```
 
+## 🔌 Hardware Acceleration
+
+OpenLPR automatically detects the best available device:
+- **NVIDIA GPU**: Uses CUDA. Ensure [NVIDIA Drivers](https://www.nvidia.com/drivers) are installed.
+- **Apple Silicon (M1/M2/M3)**: Uses Metal (MPS) for high-performance training.
+- **Fallback**: Defaults to CPU if no compatible GPU is found.
+
+### GPU Installation Tip
+If you have an NVIDIA GPU and `torch.cuda.is_available()` returns `False`, reinstall Torch with the specific CUDA index:
+```bash
+pip install torch torchvision --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+```
 ---
+
+
 
 ## Dataset Strategy
 
