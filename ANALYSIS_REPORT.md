@@ -1,4 +1,4 @@
-# 📊 Deep Analysis: Biologically-Inspired OpenLPR Performance
+# Deep Analysis: Biologically-Inspired OpenLPR Performance
 
 ## 1. Executive Summary
 The study utilized a **ResNet-50 backbone** as a control baseline to measure the additive impact of five distinct biological mechanisms. The final variant, **v5_LRC**, achieved a peak Intersection over Union (IoU) of **0.974**, representing a **+2.096 percentage point (pp)** improvement over the stock ResNet-50 baseline (0.954 IoU) and surpassing the performance ceiling of all 14 evaluated stock models.
@@ -46,4 +46,3 @@ For high-security entry systems like those developed by **ButterflyMX**, these r
 3. **Sustainability:** Tracking CO₂ emissions per accuracy point ensures that the pipeline remains compliant with emerging ESG (Environmental, Social, and Governance) standards for AI development.
 
 ---
-*Generated for Jacob Brauer's professional portfolio - OpenLPR MLOps Project.*
